@@ -53,7 +53,7 @@ async function selectDropdown() {
             type="text"
             placeholder="Search"
             :maxlength="90"
-            class="bg-transparent w-full rounded-md outline-none text-xs font-semibold"
+            class="bg-transparent placeholder:text-[#A0A7B2] w-full rounded-md outline-none text-xs font-semibold"
           />
         </span>
         <span class="flex items-center justify-center px-2">

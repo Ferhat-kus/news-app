@@ -22,7 +22,7 @@ async function ads() {
 </script>
 
 <template>
-  <div>
+  <div class="mb-10">
     <advertisingCard :adsData="adsData" />
     <newsCards :news="newsData" />
   </div>

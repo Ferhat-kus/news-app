@@ -4,7 +4,6 @@ import { ref, onUnmounted, defineProps } from "vue";
 const props = defineProps({
   adsData: {
     type: Array,
-    required: true,
   },
 });
 
@@ -18,9 +17,7 @@ const startSlider = () => {
       (currentSliderIndex.value + 1) % props.adsData.length;
   }, 1000);
 };
-
 startSlider();
-
 onUnmounted(() => {
   clearInterval(intervalId);
 });

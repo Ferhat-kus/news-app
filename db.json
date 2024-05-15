@@ -1,6 +1,7 @@
 {
   "politics": [
     {
+      "id":"1",
       "newsImg": "https://picsum.photos/200",
       "title": "Unrecognized genius",
       "description": "Lorem ipsum and Lorem ipsum in Lore Lorem ipsum in Lorem ipsum in Lorem ips",
@@ -12,6 +13,7 @@
       "newsType": "Makale"
     },
     {
+      "id":"2",
       "newsImg": "https://picsum.photos/200",
       "newsImgShow": false,
       "title": "photography",
@@ -24,6 +26,7 @@
       "newsType": "Blog"
     },
     {
+      "id":"3",
       "newsImg": "https://picsum.photos/200",
       "title": "museum of modern art completed in london",
       "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
@@ -35,6 +38,19 @@
       "newsType": "Biyografi"
     },
     {
+      "id":"4",
+      "newsImg": "https://picsum.photos/200",
+      "title": "$80, 000",
+      "newsImgShow": false,
+      "description": "Lorem ipsum and Lorem ipsum in Lore Lorem ipsum in Lorem ipsum in Lorem ips",
+      "creatorImg": "https://picsum.photos/200",
+      "creatorName": "Lorem ipsum",
+      "creatorNickname": "Lorem ipsum",
+      "creatorShow": false,
+      "newsType": "Reklam Postu"
+    },
+    {
+      "id":"5",
       "newsImg": "https://picsum.photos/200",
       "title": "installation per million",
       "description": "Lorem ipsum and Lorem ipsum in Lore Lorem ipsum in Lorem ipsum in Lorem ips",
@@ -46,8 +62,9 @@
       "newsType": "News"
     },
     {
+      "id":"6",
       "newsImg": "https://picsum.photos/200",
-      "title": "$80, 000",
+      "title": "panoramic  card",
       "newsImgShow": false,
       "description": "Lorem ipsum and Lorem ipsum in Lore Lorem ipsum in Lorem ipsum in Lorem ips",
       "creatorImg": "https://picsum.photos/200",
