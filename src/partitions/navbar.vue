@@ -43,7 +43,7 @@ async function selectDropdown() {
       <div
         @click="search"
         :class="searchStatus ? 'w-3/5' : 'w-auto'"
-        class="bg-red-100 rounded-md flex items-center justify-between px-2"
+        class="border border-black rounded-full flex items-center justify-between px-2"
       >
         <span
           :class="searchStatus ? 'w-full' : 'w-auto'"
@@ -52,6 +52,7 @@ async function selectDropdown() {
           <input
             type="text"
             placeholder="Search"
+            :maxlength="90"
             class="bg-transparent w-full rounded-md outline-none text-xs font-semibold"
           />
         </span>

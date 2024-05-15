@@ -11,8 +11,8 @@
     </div>
     <div v-show="contentClass">
       <div class="w-full flex items-center justify-between">
-        <span class="w-1/2 pl-5 uppercase whitespace-nowrap text-xs">number of the day</span>
-        <span class="bg-white w-4/12 h-[1px]"></span>
+        <span class="w-9/12 pl-5 uppercase whitespace-nowrap text-xs">today's advertisement</span>
+        <span class="bg-white w-3/12 h-[1px]"></span>
       </div>
     </div>
     <!-- Title -->
