@@ -1,4 +1,60 @@
+<script setup>
+import { ref, onUnmounted } from 'vue';
 
+const images = [
+  {
+    src: 'https://petapixel.com/assets/uploads/2022/12/what-is-unsplash-800x420.jpg',
+    alt: 'Image 1',
+  },
+  {
+    src: 'https://petapixel.com/assets/uploads/2022/12/image13-1-800x536.jpg',
+    alt: 'Image 2',
+  },
+  {
+    src: 'https://petapixel.com/assets/uploads/2022/12/image11-1-800x534.jpg',
+    alt: 'Image 3',
+  },
+];
+
+const currentSliderIndex = ref(0);
+let intervalId;
+
+// const isTimerPaused = ref(false);
+
+const startSlider = () => {
+  clearInterval(intervalId);
+  intervalId = setInterval(() => {
+    currentSliderIndex.value = (currentSliderIndex.value + 1) % images.length;
+  }, 3000);
+};
+
+// const nextSlide = () => {
+//   currentSliderIndex.value = (currentSliderIndex.value + 1) % images.length;
+//   if (!isTimerPaused.value) startSlider();
+// };
+
+// const prevSlide = () => {
+//   currentSliderIndex.value =
+//     (currentSliderIndex.value - 1 + images.length) % images.length;
+//   if (!isTimerPaused.value) startSlider();
+// };
+
+// const playSlider = () => {
+//   isTimerPaused.value = false;
+//   startSlider();
+// };
+
+// const stopSlider = () => {
+//   clearInterval(intervalId);
+//   isTimerPaused.value = true;
+// };
+
+startSlider();
+
+onUnmounted(() => {
+  clearInterval(intervalId);
+});
+</script>
 
 <template>
   <div class="flex flex-col items-center">

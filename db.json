@@ -54,10 +54,45 @@
       "creatorName": "Lorem ipsum",
       "creatorNickname": "Lorem ipsum",
       "creatorShow": false,
-      "newsType": "corner post"
+      "newsType": "Reklam Postu"
     }
   ],
-  "ads":[
-    
+  "ads": [
+    {
+      "src": "https://petapixel.com/assets/uploads/2022/12/what-is-unsplash-800x420.jpg",
+      "alt": "Image 1",
+      "title": "ads 1",
+      "detail":"Lorem Ipsum is simply dummy text of the printing and typesetting industry.1 ",
+      "adsType": "AdsPost1"
+    },
+    {
+      "src": "https://petapixel.com/assets/uploads/2022/12/image13-1-800x536.jpg",
+      "alt": "Image 2",
+      "title": "ads 2",
+      "detail":"Lorem Ipsum is simply dummy text of the printing and typesetting industry.2 ",
+      "adsType": "AdsPost2"
+    },
+    {
+      "src": "https://petapixel.com/assets/uploads/2022/12/image11-1-800x534.jpg",
+      "alt": "Image 3",
+      "title": "ads 3",
+      "detail":"Lorem Ipsum is simply dummy text of the printing and typesetting industry.3 ",
+      "adsType": "adsPost3"
+    },
+    {
+      "src": "https://petapixel.com/assets/uploads/2022/12/image13-1-800x536.jpg",
+      "alt": "Image 4",
+      "title": "ads 4",
+      "detail":"Lorem Ipsum is simply dummy text of the printing and typesetting industry.4",
+      "adsType": "adsPost4"
+    }
+  ],
+  "languages": [
+    {
+      "language": "tr"
+    },
+    {
+      "language": "en"
+    }
   ]
 }

@@ -1,53 +1,23 @@
 <script setup>
-import { ref, onUnmounted } from "vue";
+import { ref, onUnmounted, defineProps } from "vue";
 
-const images = [
-  {
-    src: "https://petapixel.com/assets/uploads/2022/12/what-is-unsplash-800x420.jpg",
-    alt: "Image 1",
+const props = defineProps({
+  adsData: {
+    type: Array,
+    required: true,
   },
-  {
-    src: "https://petapixel.com/assets/uploads/2022/12/image13-1-800x536.jpg",
-    alt: "Image 2",
-  },
-  {
-    src: "https://petapixel.com/assets/uploads/2022/12/image11-1-800x534.jpg",
-    alt: "Image 3",
-  },
-];
+});
 
 const currentSliderIndex = ref(0);
 let intervalId;
 
-// const isTimerPaused = ref(false);
-
 const startSlider = () => {
   clearInterval(intervalId);
   intervalId = setInterval(() => {
-    currentSliderIndex.value = (currentSliderIndex.value + 1) % images.length;
-  }, 500);
+    currentSliderIndex.value =
+      (currentSliderIndex.value + 1) % props.adsData.length;
+  }, 1000);
 };
-
-// const nextSlide = () => {
-//   currentSliderIndex.value = (currentSliderIndex.value + 1) % images.length;
-//   if (!isTimerPaused.value) startSlider();
-// };
-
-// const prevSlide = () => {
-//   currentSliderIndex.value =
-//     (currentSliderIndex.value - 1 + images.length) % images.length;
-//   if (!isTimerPaused.value) startSlider();
-// };
-
-// const playSlider = () => {
-//   isTimerPaused.value = false;
-//   startSlider();
-// };
-
-// const stopSlider = () => {
-//   clearInterval(intervalId);
-//   isTimerPaused.value = true;
-// };
 
 startSlider();
 
@@ -55,19 +25,22 @@ onUnmounted(() => {
   clearInterval(intervalId);
 });
 </script>
-
 <template>
   <div>
     <div
-      class="slider my-2 bg-slate-500 w-full h-20 flex items-center justify-center relative"
+      class="slider mb-5 bg-slate-300 w-full h-20 flex items-center justify-center relative"
     >
-      <div class="relative w-full h-full">
-        <template v-for="(image, index) in images" :key="index">
+      <div class="relative w-full flex items-center justify-center h-full">
+        <template v-for="(item, index) in adsData" :key="index">
+          <div v-if="index === currentSliderIndex" class="flex flex-col z-10 items-center justify-center">
+            <h1 class="font-semibold text-white uppercase">{{ item.title }}</h1>
+            <p class="text-xs font-semibold text-white underline">{{ item.detail }}</p>
+          </div>
           <transition name="fade">
             <img
-              :src="image.src"
-              :alt="image.alt"
-              class="absolute inset-0 w-full h-full object-cover"
+              :src="item.src"
+              :alt="item.alt"
+              class="absolute z-0 inset-0 w-full h-full object-cover"
               v-if="index === currentSliderIndex"
             />
           </transition>

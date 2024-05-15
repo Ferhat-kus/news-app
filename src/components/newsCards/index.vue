@@ -4,8 +4,15 @@
     news: {
       type: Array,
       required: true,
+    },
+    adsData: {
+      type: Array,
+      required: true,
     }
   });
+  function cardData(i) {
+    return i === 4 ? adsData : news[i];
+  }
   </script>
 
 <template>
@@ -35,6 +42,10 @@
   @apply col-start-5 col-end-6 row-start-2 row-end-4 border-t-2 pt-5 border-[#D0D0D0];
 }
 .card:nth-child(5) {
-  @apply col-start-5 col-end-6 row-start-1 row-end-2 text-white flex flex-col justify-evenly bg-[#AF695C];
+  @apply col-start-5 col-end-6 row-start-1 row-end-2 text-white flex flex-col justify-evenly  bg-[#AF695C];
+  background-image: url("https://picsum.photos/");
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: rotate 5s infinite alternate linear;
 }
 </style>
