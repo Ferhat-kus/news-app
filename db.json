@@ -1,0 +1,63 @@
+{
+  "politics": [
+    {
+      "newsImg": "https://picsum.photos/200",
+      "title": "Unrecognized genius",
+      "description": "Lorem ipsum and Lorem ipsum in Lore Lorem ipsum in Lorem ipsum in Lorem ips",
+      "creatorImg": "https://picsum.photos/200",
+      "creatorName": "Lorem ipsum",
+      "creatorNickname": "Lorem ipsum",
+      "creatorShow": true,
+      "ago": "16h",
+      "newsType": "Makale"
+    },
+    {
+      "newsImg": "https://picsum.photos/200",
+      "newsImgShow": false,
+      "title": "photography",
+      "description": "Lorem ipsum and Lorem ipsum in Lore Lorem ipsum in Lorem ipsum in Lorem ips",
+      "creatorImg": "https://picsum.photos/200",
+      "creatorName": "Lorem ipsum",
+      "creatorNickname": "Lorem ipsum",
+      "creatorShow": false,
+      "ago": "16h",
+      "newsType": "Blog"
+    },
+    {
+      "newsImg": "https://picsum.photos/200",
+      "title": "museum of modern art completed in london",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "creatorImg": "https://picsum.photos/200",
+      "creatorName": "Lorem ipsum",
+      "creatorNickname": "Lorem ipsum",
+      "creatorShow": false,
+      "ago": "16h",
+      "newsType": "Biyografi"
+    },
+    {
+      "newsImg": "https://picsum.photos/200",
+      "title": "installation per million",
+      "description": "Lorem ipsum and Lorem ipsum in Lore Lorem ipsum in Lorem ipsum in Lorem ips",
+      "creatorImg": "https://picsum.photos/200",
+      "creatorName": "Lorem ipsum",
+      "creatorNickname": "Lorem ipsum",
+      "creatorShow": false,
+      "ago": "156h",
+      "newsType": "News"
+    },
+    {
+      "newsImg": "https://picsum.photos/200",
+      "title": "$80, 000",
+      "newsImgShow": false,
+      "description": "Lorem ipsum and Lorem ipsum in Lore Lorem ipsum in Lorem ipsum in Lorem ips",
+      "creatorImg": "https://picsum.photos/200",
+      "creatorName": "Lorem ipsum",
+      "creatorNickname": "Lorem ipsum",
+      "creatorShow": false,
+      "newsType": "corner post"
+    }
+  ],
+  "ads":[
+    
+  ]
+}

@@ -1,0 +1,8 @@
+@import 'https://api.fontshare.com/v2/css?f[]=satoshi@300,301,400,401,500,501,700,701,900,901&display=swap';
+
+* {
+@apply font-['Satoshi',sans-serif]
+}
+body {
+  @apply bg-gradient-to-r from-[#F8E0CD] via-[#ffffff] to-[#FBE5DD] w-full max-w-7xl mx-auto;
+}
