@@ -1,14 +1,5 @@
 <script setup>
 import Card from "./components/card.vue";
-import { EffectCube, EffectFade } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/vue";
-
-import "swiper/css";
-import "swiper/css/effect-fade";
-import "swiper/css/effect-cube";
-
-import "swiper/css";
-import "swiper/css/effect-fade";
 defineProps({
   news: {
     type: Array,
@@ -26,7 +17,6 @@ defineProps({
       <Card
         class="card"
         v-bind="item"
-        :type="i === 1 ? true : false"
         :contentClass="i === 3 ? 'px-5' : ''"
         :newsImgClass="i === 4 ? 'h-[100px]' : ''"
         :panorama="i === 5 ? true : false"
