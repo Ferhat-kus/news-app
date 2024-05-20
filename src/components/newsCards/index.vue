@@ -1,5 +1,7 @@
 <script setup>
 import Card from "./components/card.vue";
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
 defineProps({
   news: {
     type: Array,
@@ -12,17 +14,23 @@ defineProps({
 </script>
 
 <template>
-  <div class="grid grid-cols-5 grid-rows-3 gap-5">
-    <template v-for="(item, i) in news" :key="i">
-      <Card
-        class="card"
-        v-bind="item"
-        :contentClass="i === 3 ? 'px-5' : ''"
-        :newsImgClass="i === 4 ? 'h-[100px]' : ''"
-        :panorama="i === 5 ? true : false"
-      />
-    </template>
-  </div>
+  <swiper>
+    <swiper-slide>
+      <div class="grid grid-cols-5 grid-rows-3 gap-5">
+        <template v-for="(item, i) in news" :key="i">
+          <Card
+            class="card"
+            v-bind="item"
+            :autoplay="i === 1 ? 1000 : 0"
+            :contentClass="i === 3 ? 'px-5' : ''"
+            :newsImgClass="i === 4 ? 'h-[100px]' : ''"
+            :panorama="i === 5 ? true : false"
+          />
+        </template>
+      </div>
+    </swiper-slide>
+    <swiper-slide> aaaaaaaaaaaa </swiper-slide>
+  </swiper>
 </template>
 
 <style scoped>

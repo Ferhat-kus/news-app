@@ -1,6 +1,9 @@
 <script setup>
 import { ref, defineProps, onMounted, onUnmounted } from "vue";
 import axiosInstance from "../../../plugins/axiosInstance";
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
+
 
 const props = defineProps({
   panorama: {
