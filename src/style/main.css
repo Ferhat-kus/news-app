@@ -4,5 +4,28 @@
 @apply font-['Satoshi',sans-serif]
 }
 body {
-  @apply bg-gradient-to-r from-[#F8E0CD] via-[#ffffff] to-[#FBE5DD] w-full max-w-7xl mx-auto;
+  @apply bg-gradient-to-r from-gradientForm via-gradientVia to-gradientTo w-full max-w-7xl mx-auto ;
 }
+
+:root {
+  --lightGray: #d3d3d3;
+  --champagne: #f7e7ce;
+  --veryLightCream: #fff9e6;
+  --lightPink: #ffd1dc;
+  --copper: #AF695C;
+  --titleAndArticles: #333333;
+  --lightBlue: #64748B;
+}
+.dark {
+  --lightGray: #000;
+  /* form */
+  --champagne: #523E30;
+  /* via */
+  --veryLightCream: #2A2A2A;
+  /* to */
+  --lightPink: #60504E;
+  --copper: #AF695C;
+  --titleAndArticles: #fff;
+  --lightBlue: #64748B;
+}
+

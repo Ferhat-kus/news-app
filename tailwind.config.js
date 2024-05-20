@@ -1,17 +1,19 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{vue,js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
+  darkMode: "class",
   theme: {
-    // colors: {
-    //   // rose1:'#F9EDDF',
-    //   // rose2:'#F9F4ED',
-    //   // rose3:'#FBE5DD',
-    //   // black: '#000000',
-    // },
-    extend: {},
+    extend: {
+      colors: {
+        placeholderAndUnderline: "var(--lightGray)",
+        gradientForm: "var(--champagne)",
+        gradientVia: "var(--veryLightCream)",
+        gradientTo: "var(--lightPink)",
+        copper: "var(--copper)",
+        titleAndArticles: "var(--titleAndArticles)",
+        newsTypeText: "var(--lightBlue)",
+      },
+    },
   },
   plugins: [],
-}
+};

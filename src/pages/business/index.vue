@@ -1,91 +1,22 @@
-<script setup>
-import { ref, onUnmounted } from 'vue';
-
-const images = [
-  {
-    src: 'https://petapixel.com/assets/uploads/2022/12/what-is-unsplash-800x420.jpg',
-    alt: 'Image 1',
-  },
-  {
-    src: 'https://petapixel.com/assets/uploads/2022/12/image13-1-800x536.jpg',
-    alt: 'Image 2',
-  },
-  {
-    src: 'https://petapixel.com/assets/uploads/2022/12/image11-1-800x534.jpg',
-    alt: 'Image 3',
-  },
-];
-
-const currentSliderIndex = ref(0);
-let intervalId;
-
-// const isTimerPaused = ref(false);
-
-const startSlider = () => {
-  clearInterval(intervalId);
-  intervalId = setInterval(() => {
-    currentSliderIndex.value = (currentSliderIndex.value + 1) % images.length;
-  }, 3000);
-};
-
-// const nextSlide = () => {
-//   currentSliderIndex.value = (currentSliderIndex.value + 1) % images.length;
-//   if (!isTimerPaused.value) startSlider();
-// };
-
-// const prevSlide = () => {
-//   currentSliderIndex.value =
-//     (currentSliderIndex.value - 1 + images.length) % images.length;
-//   if (!isTimerPaused.value) startSlider();
-// };
-
-// const playSlider = () => {
-//   isTimerPaused.value = false;
-//   startSlider();
-// };
-
-// const stopSlider = () => {
-//   clearInterval(intervalId);
-//   isTimerPaused.value = true;
-// };
-
-startSlider();
-
-onUnmounted(() => {
-  clearInterval(intervalId);
-});
-</script>
-
 <template>
-  <div class="flex flex-col items-center">
-    <div class="slider bg-slate-500 w-full h-16 flex items-center justify-center relative">
-      <div class="relative w-full h-full">
-        <template v-for="(image, index) in images" :key="index">
-          <transition name="fade">
-            <img
-              :src="image.src"
-              :alt="image.alt"
-              class="absolute inset-0 w-full h-full object-cover"
-              v-if="index === currentSliderIndex"
-            />
-          </transition>
-        </template>
-      </div>
-    </div>
-  </div>
+  <swiper class="bg-red-100">
+    <swiper-slide class="bg-red-900">Slide 1</swiper-slide>
+    <swiper-slide class="bg-red-900">Slide 2</swiper-slide>
+    <swiper-slide class="bg-red-900">Slide 3</swiper-slide>
+  </swiper>
 </template>
 
-<style>
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 1s, transform 1s;
-}
+<script setup>
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
 
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-  transform: translateX(0);
-}
+// Handler for Swiper initialization
+const onSwiper = (swiper) => {
+  console.log(swiper);
+};
 
-
-</style>
+// Handler for slide change event
+const onSlideChange = () => {
+  console.log("slide change");
+};
+</script>

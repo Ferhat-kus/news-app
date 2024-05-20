@@ -1,5 +1,14 @@
 <script setup>
 import Card from "./components/card.vue";
+import { EffectCube, EffectFade } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/vue";
+
+import "swiper/css";
+import "swiper/css/effect-fade";
+import "swiper/css/effect-cube";
+
+import "swiper/css";
+import "swiper/css/effect-fade";
 defineProps({
   news: {
     type: Array,
@@ -12,12 +21,12 @@ defineProps({
 </script>
 
 <template>
-  <div class="grid  grid-cols-5 grid-rows-3 gap-5">
-    <template :key="i" v-for="(item, i) in news">
+  <div class="grid grid-cols-5 grid-rows-3 gap-5">
+    <template v-for="(item, i) in news" :key="i">
       <Card
         class="card"
-        type
         v-bind="item"
+        :type="i === 1 ? true : false"
         :contentClass="i === 3 ? 'px-5' : ''"
         :newsImgClass="i === 4 ? 'h-[100px]' : ''"
         :panorama="i === 5 ? true : false"
@@ -40,10 +49,9 @@ defineProps({
   @apply col-span-1 row-span-1 row-start-1 col-start-5 text-white flex flex-col justify-center bg-[#AF695C];
 }
 .card:nth-child(5) {
-  @apply col-span-1 row-span-1 row-start-2 col-start-5  border-t-2 pt-5 border-[#D0D0D0];
+  @apply col-span-1 row-span-1 row-start-2 col-start-5 border-t-2 pt-5 border-[#D0D0D0];
 }
 .card:nth-child(6) {
-  @apply col-span-1  bg-cover bg-no-repeat row-span-1 row-start-3 col-start-5 p-5  text-white flex flex-col items-start justify-center;
-  /* background-image: url("https://picsum.photos/200"); */
+  @apply col-span-1 bg-cover bg-no-repeat row-span-1 row-start-3 col-start-5 p-5 text-white flex flex-col items-start justify-center;
 }
 </style>
